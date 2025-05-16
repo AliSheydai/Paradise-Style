@@ -1,0 +1,291 @@
+:where([class^="ri-"])::before {
+    content: "\f3c2";
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Vazirmatn', sans-serif;
+    font-weight: 700;
+}
+
+.hero-section {
+    background-image: url('https://readdy.ai/api/search-image?query=high-end%20fashion%20boutique%20with%20elegant%20dresses%20displayed%20on%20mannequins%2C%20soft%20lighting%2C%20minimalist%20luxury%20interior%20design%2C%20neutral%20color%20palette%2C%20clean%20lines%2C%20professional%20fashion%20photography%20style%2C%20high-resolution%20image%2C%20perfect%20for%20a%20modern%20dress%20seller%20website%20hero%20section&width=1920&height=800&seq=1&orientation=landscape');
+    background-size: cover;
+    background-position: center;
+}
+
+.category-item:hover .category-overlay {
+    opacity: 1;
+}
+
+.product-card:hover .quick-view {
+    opacity: 1;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #8a2be2;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.custom-checkbox {
+    position: relative;
+    padding-right: 28px;
+    cursor: pointer;
+}
+
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #2d2d2d;
+    border: 1px solid #444;
+    border-radius: 4px;
+}
+
+.custom-checkbox input:checked~.checkmark {
+    background-color: #8a2be2;
+    border-color: #8a2be2;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-checkbox input:checked~.checkmark:after {
+    display: block;
+}
+
+.custom-checkbox .checkmark:after {
+    right: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.custom-radio {
+    position: relative;
+    padding-right: 28px;
+    cursor: pointer;
+}
+
+.custom-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radiomark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #2d2d2d;
+    border: 1px solid #444;
+    border-radius: 50%;
+}
+
+.custom-radio input:checked~.radiomark {
+    background-color: #2d2d2d;
+    border-color: #8a2be2;
+}
+
+.radiomark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-radio input:checked~.radiomark:after {
+    display: block;
+}
+
+.custom-radio .radiomark:after {
+    top: 4px;
+    right: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #8a2be2;
+}
+
+.color-option {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+.color-option.selected::after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border: 2px solid #8a2be2;
+    border-radius: 50%;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2d2d2d;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    right: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #8a2be2;
+}
+
+input:checked+.slider:before {
+    transform: translateX(-24px);
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        background-position: 70% center;
+    }
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.size-guide-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.size-guide-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+    min-width: 300px;
+}
+
+.toast-notification.show {
+    display: block;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.cart-animation {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: #8a2be2;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1000;
+    transition: all 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+}
